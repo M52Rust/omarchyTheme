@@ -1,0 +1,146 @@
+
+@define-color white #E6F0FF;
+@define-color dark #08101A;
+@define-color primary #40C4FF;
+@define-color primary-muted #122C39;
+@define-color muted #2B3A4A;
+@define-color secondary #00E5FF;
+@define-color danger #FF5252;     
+@define-color warning #FFD740;     
+
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+}
+
+
+
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: CaskaydiaMono Nerd Font;
+  font-size: 12px;
+}
+
+window#waybar {
+    color: @white;
+    background: transparent;
+    margin-top: 5px;
+}
+
+
+.modules-left {
+  margin-left: 8px;
+}
+
+.modules-right {
+  margin-right: 8px;
+}
+
+#workspaces button {
+  all: initial;
+  padding: 0px 8px;
+  margin: 0 1.5px;
+  font-weight: bold;
+  border-radius: 50%;
+  background: @dark;
+  border: 1px solid @muted;
+  margin: 0px 2px;
+}
+
+#workspaces button.empty {
+  color: @muted;
+}
+
+#workspaces button.active {
+    color: @primary;
+    border: 1px solid @primary;
+    opacity: 1;
+}
+
+#workspaces button:hover {
+    background: @primary-muted;
+    color: @primary;
+}
+
+#clock, #tray, #network, #custom-omarchy, #group-tray-expander,
+#pulseaudio, #battery, #idle_inhibitor, #backlight,
+#bluetooth, #cpu, #memory, #temperature, #custom-expand-icon {
+    padding: 0px 12px;
+    color: @primary;
+    background-color: @dark;
+    margin: 0 3px;
+    border-radius: 16px;
+    border: 1px solid @muted;
+    transition-duration: 500ms;
+}
+
+#clock:hover, #tray:hover, #network:hover, #custom-omarchy:hover,
+#pulseaudio:hover, #battery:hover, #idle_inhibitor:hover, #backlight:hover,
+#bluetooth:hover, #cpu:hover, #memory:hover, #temperature:hover, #custom-expand-icon:hover {
+	background-color: @primary-muted;
+}
+
+#group-tray-expander {
+	background-color: @dark;
+}
+
+
+#clock {
+	font-weight: bold;
+}
+
+
+#custom-expand-icon {
+  
+}
+
+.tooltip {
+	background: rgba(0,0,0,0.9);
+	opacity: 1;
+	color: @primary;
+	padding: 3px;
+}
+
+#custom-update {
+
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#custom-screenrecording-indicator {
+  min-width: 12px;
+  margin-left: 8.75px;
+  font-size: 10px;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #a55555;
+}
+
+#temperature.critical {
+    background: @danger;
+    color: @background;
+}
+
+
+#battery.critical:not(.charging) {
+    background: @dark;
+    color: @danger;
+    animation: blink 0.5s linear infinite alternate;
+}
+
+
+@keyframes blink {
+    to {
+        background-color: @dark;
+        color: @danger;
+    }
+}
+
+
+
+
+
